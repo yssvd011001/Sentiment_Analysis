@@ -33,34 +33,14 @@ FinBERT was fine-tuned on the Financial PhraseBank corpus and Reuters financial 
 
 ---
 
-## Project Structure
-
-```
-sentiment_analyzer/
-├── news_collector.py      # NewsAPI and RSS feed collectors
-├── sentiment_engine.py    # FinBERT scoring pipeline
-├── signal_builder.py      # Merge sentiment with price data, compute IC
-├── main.py                # Full pipeline runner
-├── dashboard.py           # Multi-page Streamlit dashboard
-├── config.py              # API keys and company watchlist
-├── data/
-│   ├── headlines.csv      # Raw headlines with metadata
-│   ├── sentiment.csv      # FinBERT-scored headlines
-│   ├── signals.csv        # Daily sentiment merged with returns
-│   ├── ic_results.csv     # IC by company and overall
-│   └── backtest.csv       # Daily strategy returns
-└── README.md
-```
-
----
 
 ## Quickstart
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/sentiment-price-signals.git
-cd sentiment-price-signals
+git clone https://github.com/yssvd011001/Sentiment_Analysis.git
+cd Sentiment_Analysis
 ```
 
 ### 2. Install dependencies
@@ -82,16 +62,14 @@ NEWSAPI_KEY = "your_key_here"
 
 ### 4. Run the pipeline
 
-```bash
-python main.py
-```
+run sentiment.ipynb in jupyter notebook
 
 Downloads FinBERT (~440MB, one time), fetches headlines, scores all articles, merges with price data, computes IC, runs backtest. Saves all outputs to `data/`.
 
 ### 5. Launch the dashboard
 
 ```bash
-streamlit run dashboard.py
+streamlit run sentiment_app.py
 ```
 
 Opens at `http://localhost:8501`.
@@ -281,6 +259,6 @@ Install feedparser: `pip install feedparser`
 ## Author
 
 **Deeraj**
-PGDM-BFS, IMT Ghaziabad (Batch 2025–27)
+PGDM, IMT Ghaziabad (Batch 2025–27)
 B.Tech Mechanical Engineering, NIT Calicut
-[LinkedIn](https://linkedin.com/in/your-profile) · [GitHub](https://github.com/your-username)
+[LinkedIn](https://www.linkedin.com/in/deeraj-yerramsetti-2379b31aa/) · [GitHub](https://github.com/yssvd011001)
